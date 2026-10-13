@@ -31,7 +31,7 @@
 <p>Contact : <a href="mailto:contact@vendria.fr">contact@vendria.fr</a></p>
 
 <h2>2. À quoi sert l'application ?</h2>
-<p>Vendria aide un particulier à vendre son bien immobilier. À partir de photos, elle rédige un titre et une description d'annonce et peut proposer une estimation de prix <strong>indicative</strong>. Elle aide aussi à réunir les documents de vente, à trouver des diagnostiqueurs et notaires près du bien, à préparer des demandes de devis et un dossier pour le notaire.</p>
+<p>Vendria aide un particulier à vendre son bien immobilier. À partir de photos (facultatives pour un garage, un parking, un box ou un terrain), elle rédige un titre et une description d'annonce et peut proposer une estimation de prix <strong>indicative</strong>. Elle aide aussi à réunir les documents de vente, à trouver des diagnostiqueurs et notaires près du bien, à préparer des demandes de devis et un dossier pour le notaire.</p>
 <p>Un aperçu de l'annonce est gratuit. L'annonce complète et les estimations de prix d'un bien se débloquent par un achat dans l'application.</p>
 
 <h2>3. Quelles données sont utilisées ?</h2>
@@ -52,7 +52,7 @@
 <ul>
   <li><strong>Sur votre appareil</strong> : les annonces en cours, les photos, les documents de vente et le dossier notaire sont enregistrés sur votre téléphone ou votre tablette. Ils sont supprimés si vous désinstallez l'application. Les documents de vente et le dossier notaire ne quittent l'appareil que si vous les partagez vous-même (par exemple par e-mail à votre notaire).</li>
   <li><strong>Sur notre serveur</strong> : les photos sont utilisées le temps de rédiger l'annonce, <strong>sans être enregistrées</strong>. Votre compte, vos dossiers (annonces et estimations) et vos achats sont enregistrés dans notre base de données, pour vous donner accès à ce que vous avez débloqué. Ils sont conservés tant que votre compte existe, et supprimés quand vous le supprimez (voir la section 5). Un aperçu gratuit créé sans compte est gardé pour que vous puissiez le débloquer plus tard ; vous pouvez demander sa suppression à <a href="mailto:contact@vendria.fr">contact@vendria.fr</a>. Les documents de vente et le dossier notaire ne sont jamais envoyés à notre serveur.</li>
-  <li><strong>Chez le prestataire d'intelligence artificielle</strong> : pour rédiger l'annonce et l'estimation, les photos et informations saisies sont transmises à <strong>OpenAI</strong>, qui les traite selon sa propre politique de confidentialité (<a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a>) et peut les conserver temporairement.</li>
+  <li><strong>Chez le prestataire d'intelligence artificielle</strong> : pour rédiger l'annonce à partir de vos photos et l'estimation d'une maison ou d'un appartement, les photos et informations saisies sont transmises à <strong>OpenAI</strong>, qui les traite selon sa propre politique de confidentialité (<a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a>) et peut les conserver temporairement.</li>
   <li><strong>Pour les achats</strong> : le paiement est réalisé par Apple (App Store) ou Google (Google Play). <strong>RevenueCat</strong> vérifie vos achats à partir de l'identifiant de votre compte Vendria, sans votre nom ni votre e-mail (<a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>).</li>
 </ul>
 
@@ -67,8 +67,8 @@
   <li><strong>Neon</strong> : hébergement de la base de données (comptes, dossiers, achats).</li>
   <li><strong>RevenueCat</strong> : gestion des achats dans l'application.</li>
   <li><strong>Apple et Google</strong> : distribution de l'application, connexion au compte et paiement.</li>
-  <li>Des <strong>services publics de données ouvertes</strong> (data.gouv.fr, geo.api.gouv.fr), interrogés avec la commune ou le code postal pour retrouver le prix médian officiel (statistiques DVF) et les diagnostiqueurs certifiés du département (annuaire officiel du ministère chargé du logement). Aucune photo ni information personnelle n'y est envoyée.</li>
-  <li>Le <strong>service de géocodage de la Géoplateforme</strong> (IGN, data.geopf.fr) : si vous utilisez votre position, ses coordonnées approximatives lui sont envoyées directement depuis votre appareil pour obtenir la commune, sans autre information.</li>
+  <li>Des <strong>services publics de données ouvertes</strong> (data.gouv.fr, geo.api.gouv.fr), interrogés avec la commune ou le code postal pour retrouver le prix médian officiel (statistiques DVF) et les diagnostiqueurs certifiés du département (annuaire officiel du ministère chargé du logement), ainsi que les fichiers publics des ventes géolocalisées (DVF, files.data.gouv.fr), téléchargés par commune. Aucune photo ni information personnelle n'y est envoyée.</li>
+  <li>Le <strong>service de géocodage de la Géoplateforme</strong> (IGN, data.geopf.fr) : si vous utilisez votre position, ses coordonnées approximatives lui sont envoyées directement depuis votre appareil pour obtenir la commune, sans autre information. Pour estimer un terrain, un garage, un parking ou un box, notre serveur lui envoie l'adresse du bien que vous saisissez (numéro, rue, code postal, ville), afin de situer le bien et de trouver les ventes proches.</li>
   <li>L'<strong>annuaire des notaires de France</strong> (notaires.fr) s'ouvre dans votre navigateur : l'application ne lui transmet rien.</li>
 </ul>
 <p>Ces prestataires peuvent être situés hors de l'Union européenne, notamment aux États-Unis. Nous ne vendons aucune donnée.</p>
@@ -77,7 +77,9 @@
 <p>Évitez de photographier des personnes, des documents, des papiers d'identité ou des informations personnelles dans les photos d'annonce : elles sont envoyées pour analyse. Photographiez uniquement le bien à présenter.</p>
 
 <h2>8. Estimation indicative</h2>
-<p>Les estimations de prix sont calculées à partir du prix médian des ventes de la commune (ou du département lorsque la commune compte trop peu de ventes), d'après les statistiques publiques DVF, et des informations saisies ; une intelligence artificielle rédige l'explication et n'estime seule qu'en l'absence de ces données. Elles ne sont proposées que pour les maisons et appartements. Elles ne constituent <strong>pas un avis de valeur professionnel</strong> et doivent être vérifiées avant de fixer un prix.</p>
+<p>Pour une maison ou un appartement, l'estimation part du prix médian des ventes de la commune (ou du département lorsque la commune compte trop peu de ventes), d'après les statistiques publiques DVF, et des informations saisies ; une intelligence artificielle rédige l'explication et n'estime seule qu'en l'absence de ces données.</p>
+<p>Pour un terrain, un garage, un parking ou un box, l'estimation compare des ventes réelles de biens semblables autour de l'adresse, sur les cinq dernières années (données publiques DVF), sans intelligence artificielle. Seuls des chiffres d'ensemble sont affichés (prix médian, fourchette, nombre de ventes) : aucune vente ni aucun propriétaire n'est montré. Lorsque les ventes comparables sont trop peu nombreuses, ou en Alsace, en Moselle et à Mayotte (absentes de DVF), aucune estimation n'est faite et l'application vous oriente vers un notaire.</p>
+<p>Les estimations ne constituent <strong>pas un avis de valeur professionnel</strong> et doivent être vérifiées avant de fixer un prix.</p>
 
 <h2>9. Vos droits</h2>
 <p>Conformément au Règlement général sur la protection des données (RGPD), vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Pour les exercer, écrivez à <a href="mailto:contact@vendria.fr">contact@vendria.fr</a>.</p>
