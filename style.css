@@ -89,9 +89,17 @@ a:focus-visible {
 .download-link:hover { background: #214360; }
 
 .hero {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  margin-top: clamp(2.5rem, 6vw, 5.5rem);
+}
+
+.hero-copy { min-width: 0; }
+
+.hero-visual {
   position: relative;
-  isolation: isolate;
-  margin-top: clamp(1rem, 3vw, 2.75rem);
+  min-width: 0;
+  padding-bottom: .85rem;
 }
 
 .hero-photo {
@@ -103,17 +111,25 @@ a:focus-visible {
   aspect-ratio: auto 3 / 2;
 }
 
-.hero-card, .legal {
+.hero-note, .legal {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-.hero-card {
-  position: relative;
-  margin: -1.5rem .5rem 0;
-  padding: clamp(1.25rem, 4vw, 2.65rem);
+.hero-note {
+  position: absolute;
+  bottom: 0;
+  left: clamp(.75rem, 2vw, 1.5rem);
+  padding: .6rem .85rem;
   background: var(--ivory);
+}
+
+.hero-note .eyebrow { margin-bottom: .15rem; }
+
+.hero-note-title {
+  color: var(--navy);
+  font: 600 1.3rem/1.1 var(--serif);
 }
 
 .eyebrow {
@@ -128,15 +144,23 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-.eyebrow::before {
+.eyebrow::before, .hero-signature::after {
   content: "";
   width: 1.65rem;
   height: 1px;
   background: var(--gold);
 }
 
+.hero-signature {
+  margin-top: 1.25rem;
+  letter-spacing: .22em;
+}
+
+.hero-note .eyebrow::before, .offer-card .eyebrow::before { content: none; }
+
 .tagline {
-  margin: 1rem 0 1.35rem;
+  max-width: 37ch;
+  margin: 1.5rem 0 1.35rem;
   font: italic 500 clamp(1.35rem, 2.5vw, 1.75rem)/1.23 var(--serif);
   color: var(--navy);
 }
@@ -148,17 +172,6 @@ a:focus-visible {
 }
 
 .store-badge img { display: block; object-fit: contain; }
-
-.trust {
-  display: table;
-  margin-top: 1rem;
-  padding: .45rem .75rem;
-  border: 1px solid var(--gold);
-  border-radius: 1rem;
-  color: var(--navy);
-  font-size: .775rem;
-  font-weight: 500;
-}
 
 .availability { margin-top: .55rem; color: var(--muted); font-size: .75rem; }
 
@@ -233,8 +246,7 @@ a:focus-visible {
   letter-spacing: -.045em;
 }
 
-.price, .trust strong { font-variant-numeric: lining-nums; }
-.trust strong { font-weight: 600; }
+.price { font-variant-numeric: lining-nums; }
 
 .price span { font: 500 .85rem var(--sans); letter-spacing: 0; }
 
@@ -291,24 +303,10 @@ a:focus-visible {
   .shell { width: min(100% - 4rem, 74rem); }
 
   .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 32rem) 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-    min-height: 35rem;
-    padding: clamp(1.5rem, 4vw, 3.25rem);
   }
 
-  .hero-photo {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    height: 100%;
-    object-fit: cover;
-    object-position: right 54%;
-  }
-
-  .hero-card { margin: 0; }
-  .hero-card h1 { font-size: clamp(3.35rem, 4.8vw, 3.85rem); }
   .timeline { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 2rem; }
   .timeline li { padding: 3.25rem .65rem 0 0; }
   .timeline li:not(:last-child)::before { inset: 1.2rem -1.2rem auto 1.2rem; width: auto; height: 1px; }
