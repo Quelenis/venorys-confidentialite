@@ -103,7 +103,7 @@ a:focus-visible {
   aspect-ratio: auto 3 / 2;
 }
 
-.hero-card, .offer-card, .legal {
+.hero-card, .legal {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -210,22 +210,25 @@ a:focus-visible {
 
 .offer {
   display: grid;
-  align-items: center;
-  gap: 1.5rem 3rem;
-  padding-top: clamp(2rem, 5vw, 3.5rem);
-  border-top: 1px solid var(--line);
+  gap: clamp(1rem, 2.5vw, 2rem);
 }
-
-.offer-intro > p:last-child { max-width: 42ch; margin-top: .9rem; }
 
 .offer-card {
   padding: clamp(1.25rem, 4vw, 2.5rem);
-  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgb(255 252 247 / 25%);
 }
 
+.offer-card-premium {
+  border-color: var(--gold);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.offer-title { font-size: clamp(2rem, 3.2vw, 2.8rem); }
+
 .price {
-  margin: .25rem 0 .5rem;
-  color: var(--navy);
   font: 600 clamp(2.8rem, 6vw, 4rem)/1 var(--sans);
   letter-spacing: -.045em;
 }
@@ -234,7 +237,21 @@ a:focus-visible {
 .trust strong { font-weight: 600; }
 
 .price span { font: 500 .85rem var(--sans); letter-spacing: 0; }
-.offer-detail { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gold); }
+
+.offer-subtitle { margin-top: .6rem; }
+.offer-subtitle em { color: var(--muted); }
+
+.offer-list {
+  display: grid;
+  gap: .5rem;
+  margin: 1rem 0 0;
+  padding: 1rem 0 0 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--navy);
+  list-style-type: "✓ ";
+}
+
+.offer-detail { margin-top: 1rem; color: var(--muted); }
 
 .site-footer { border-top: 1px solid var(--line); }
 
@@ -295,5 +312,7 @@ a:focus-visible {
   .timeline { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 2rem; }
   .timeline li { padding: 3.25rem .65rem 0 0; }
   .timeline li:not(:last-child)::before { inset: 1.2rem -1.2rem auto 1.2rem; width: auto; height: 1px; }
-  .offer { grid-template-columns: 1fr 1fr; }
+  .offer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .offer-title { min-height: 4rem; align-content: center; }
 }
