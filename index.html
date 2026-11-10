@@ -1,32 +1,79 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vendria – annonce immobilière et estimation par IA</title>
-<style>
-  :root { --fond:#ffffff; --texte:#1c2733; --discret:#5a6675; --accent:#1a3f62; }
-  @media (prefers-color-scheme: dark) {
-    :root { --fond:#12181f; --texte:#e6ebf0; --discret:#9aa7b5; --accent:#7dc4ee; }
-  }
-  body { margin:0; background:var(--fond); color:var(--texte);
-         font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:640px; margin:0 auto; padding:64px 16px; }
-  h1 { font-size:2rem; color:var(--accent); margin:0 0 8px; }
-  p { margin:12px 0; }
-  .discret { color:var(--discret); font-size:.95rem; }
-  a { color:var(--accent); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vendez votre bien sans agence avec Vendria Immobilier, de la description du bien à la publication de votre annonce.">
+  <title>Vendria Immobilier – Vendez votre bien sans agence</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <h1>Vendria</h1>
-  <p>Votre annonce immobilière et une estimation de prix, à partir de quelques photos. Pour les particuliers qui vendent leur bien sans agence.</p>
-  <p>Disponible sur l'App Store pour iPhone et iPad.</p>
-  <p class="discret">
-    <a href="confidentialite">Politique de confidentialité</a> ·
-    Contact : <a href="mailto:contact@vendria.fr">contact@vendria.fr</a>
-  </p>
-</main>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html">Vendria</a>
+      <a class="download-link" href="https://apps.apple.com/fr/app/vendria-immobilier/id6817850161">Télécharger</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <!-- Photo : Hannah Busing sur Unsplash, https://unsplash.com/photos/U-k6XLlml1I -->
+      <img class="hero-photo"
+           src="https://images.unsplash.com/photo-1499955085172-a104c9463ece?auto=format&amp;w=1600&amp;q=85"
+           srcset="https://images.unsplash.com/photo-1499955085172-a104c9463ece?auto=format&amp;w=800&amp;q=85 800w,
+                   https://images.unsplash.com/photo-1499955085172-a104c9463ece?auto=format&amp;w=1600&amp;q=85 1600w,
+                   https://images.unsplash.com/photo-1499955085172-a104c9463ece?auto=format&amp;w=2400&amp;q=85 2400w"
+           sizes="(min-width: 78rem) 74rem, (min-width: 54rem) calc(100vw - 4rem), calc(100vw - 2rem)"
+           alt="" fetchpriority="high">
+      <div class="hero-card">
+        <p class="eyebrow">Vendria Immobilier</p>
+        <h1 id="hero-title">Vendez votre bien, accompagné à chaque étape</h1>
+        <p class="tagline">Vendria est votre coach pour vendre sans agence, de la description de votre bien jusqu'à sa mise en ligne.</p>
+        <a class="store-badge" href="https://apps.apple.com/fr/app/vendria-immobilier/id6817850161">
+          <img src="app-store-fr.svg" width="158" height="50" alt="Télécharger dans l’App Store">
+        </a>
+        <p class="trust">Prix issus des ventes réelles (DVF) · 19,99&nbsp;€ par bien · Sans&nbsp;abonnement</p>
+        <p class="availability">Pour iPhone et iPad <span aria-hidden="true">·</span> Bientôt sur Android</p>
+      </div>
+    </section>
+
+    <section class="shell steps" aria-labelledby="steps-title">
+      <p class="eyebrow">Le parcours</p>
+      <h2 id="steps-title">Comment ça marche</h2>
+      <ol class="timeline" role="list">
+        <li><span class="step-number" aria-hidden="true">01</span><h3>Le bien</h3><p>Je décris mon bien</p></li>
+        <li><span class="step-number" aria-hidden="true">02</span><h3>Annonce</h3><p>Je découvre mon annonce</p></li>
+        <li><span class="step-number" aria-hidden="true">03</span><h3>Dossier</h3><p>Je prépare mon dossier</p></li>
+        <li><span class="step-number" aria-hidden="true">04</span><h3>Publication</h3><p>Je publie mon annonce</p></li>
+        <li><span class="step-number" aria-hidden="true">05</span><h3>Suivi</h3><p>Je suis ma vente</p></li>
+      </ol>
+    </section>
+
+    <section class="shell offer" aria-labelledby="offer-title">
+      <div class="offer-intro">
+        <p class="eyebrow">Le tarif</p>
+        <h2 id="offer-title">Une offre claire</h2>
+        <p>Vous découvrez Vendria et l’aperçu de votre annonce rédigée par IA. Vous pouvez ensuite débloquer votre projet complet dans l’application.</p>
+      </div>
+      <div class="offer-card">
+        <h3>Mon projet complet</h3>
+        <p class="price">19,99&nbsp;€ <span>par bien</span></p>
+        <p>Paiement unique, sans abonnement.<br>Votre projet est conservé 2 ans à partir de l’achat.</p>
+        <p class="offer-detail">Annonce complète, repère de prix indicatif, dossier de vente et aide à la publication.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <nav aria-label="Informations légales">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cgu-cgv.html">CGU / CGV</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="mailto:contact@vendria.fr">contact@vendria.fr</a>
+      </nav>
+      <p>© 2026 Vendria</p>
+    </div>
+  </footer>
 </body>
 </html>
