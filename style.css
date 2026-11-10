@@ -96,12 +96,6 @@ a:focus-visible {
 
 .hero-copy { min-width: 0; }
 
-.hero-visual {
-  position: relative;
-  min-width: 0;
-  padding-bottom: .85rem;
-}
-
 .hero-photo {
   display: block;
   width: 100%;
@@ -111,25 +105,10 @@ a:focus-visible {
   aspect-ratio: auto 3 / 2;
 }
 
-.hero-note, .legal {
+.legal {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-}
-
-.hero-note {
-  position: absolute;
-  bottom: 0;
-  left: clamp(.75rem, 2vw, 1.5rem);
-  padding: .6rem .85rem;
-  background: var(--ivory);
-}
-
-.hero-note .eyebrow { margin-bottom: .15rem; }
-
-.hero-note-title {
-  color: var(--navy);
-  font: 600 1.3rem/1.1 var(--serif);
 }
 
 .eyebrow {
@@ -156,7 +135,7 @@ a:focus-visible {
   letter-spacing: .22em;
 }
 
-.hero-note .eyebrow::before, .offer-card .eyebrow::before { content: none; }
+.offer-card .eyebrow::before { content: none; }
 
 .tagline {
   max-width: 37ch;
