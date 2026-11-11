@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap');
 
+@font-face { font-family: "Cormorant App"; src: url("assets/fonts/CormorantGaramond.ttf") format("truetype"); font-weight: 300 700; font-style: normal; font-display: swap; }
+
 :root {
   color-scheme: light;
   --ivory: #f7f3ec;
@@ -91,7 +93,7 @@ a:focus-visible {
 .hero {
   display: grid;
   gap: clamp(2rem, 5vw, 4.5rem);
-  margin-top: clamp(2.5rem, 6vw, 5.5rem);
+  margin-top: clamp(1.25rem, 3vw, 2.75rem);
 }
 
 .hero-copy { min-width: 0; }
@@ -292,4 +294,26 @@ a:focus-visible {
   .offer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .offer-title { min-height: 4rem; align-content: center; }
+}
+
+/* Marque identique à la signature de l’application. */
+.wordmark { display: inline-flex; align-items: center; gap: 8px; font: 500 1.6rem/1 "Cormorant App", Georgia, serif; letter-spacing: 2px; }
+.wordmark img { display: block; object-fit: contain; }
+.steps { text-align: center; }
+.steps-intro { max-width: 48rem; margin: 1rem auto 0; }
+.timeline h3 { font-weight: 500; }
+.timeline p { font-weight: 400; font-size: 1rem; color: var(--ink); }
+.coach { text-align: center; max-width: 52rem; margin-block: 3rem 4rem; }
+.coach > p { margin-top: 1.25rem; }
+.coach-signature { font: italic 500 clamp(1.5rem, 3vw, 2rem)/1.3 var(--serif); color: var(--navy); }
+@media (min-width: 54rem) {
+  .timeline li { padding-inline: .65rem; }
+  .step-number { left: calc(50% - 1.2rem); }
+  .timeline li:not(:last-child)::before { left: 50%; right: -50%; }
+}
+@media (max-width: 53.999rem) {
+  .timeline { max-width: 34rem; margin-inline: auto; }
+  .timeline li { padding-left: 0; padding-top: 3.25rem; padding-bottom: 1.75rem; }
+  .step-number { left: calc(50% - 1.2rem); }
+  .timeline li:not(:last-child)::before { content: none; }
 }
