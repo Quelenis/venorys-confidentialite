@@ -9,4 +9,4 @@ Parcours commun : Je décris mon bien · Je prépare mon annonce · Je prépare 
 Sous-titre de Mon projet complet : « Tout votre projet, accompagné », en italique.
 
 Le logo et le diamant reprennent les ressources de l’application, sans redessiner le symbole.
-Ce lot reste local : aucun push, publication, déploiement ou envoi à Apple. Médiateur et CGV restent à finaliser avant publication.
+Ce lot reste local : aucun push, publication, déploiement ou envoi à Apple. Les mentions CM2C ont été intégrées localement le 11 novembre 2026 après vérification de la convention, de l’attestation et du secteur B01. Cette intégration ne vaut pas validation complète des CGU/CGV ni autorisation de publication.
