@@ -21,7 +21,7 @@
   <main class="legal">
     <h1>CONDITIONS GENERALES D’UTILISATION ET DE VENTE</h1>
     <p><strong>Site vendria.fr et application Vendria Immobilier</strong></p>
-    <p class="date">Dernière mise à jour : <time datetime="2026-11-11">11 novembre 2026</time></p>
+    <p class="date">Dernière mise à jour : <time id="date-entree-en-vigueur-cgu"></time></p>
     <p>Les présentes Conditions Générales d’Utilisation et de Vente, ci-après les « Conditions », régissent l’accès et l’utilisation du site vendria.fr et de l’application Vendria Immobilier, ainsi que l’achat de l’offre payante proposée dans l’application.</p>
     <h2>1. Éditeur</h2>
     <p>Vendria est édité par :</p>
@@ -187,5 +187,12 @@
       <p>© 2026 Vendria</p>
     </div>
   </footer>
+  <script>
+    // À remplacer par la date de sortie de la 1.5
+    const dateEntreeEnVigueurCguCgv = { iso: '2026-11-11', libelle: '11 novembre 2026' };
+    const dateCgu = document.getElementById('date-entree-en-vigueur-cgu');
+    dateCgu.dateTime = dateEntreeEnVigueurCguCgv.iso;
+    dateCgu.textContent = dateEntreeEnVigueurCguCgv.libelle;
+  </script>
 </body>
 </html>
