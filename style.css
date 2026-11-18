@@ -356,3 +356,22 @@ a:focus-visible {
   .step-number { left: calc(50% - 1.2rem); }
   .timeline li:not(:last-child)::before { content: none; }
 }
+
+@media (max-width: 40rem) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgb(247 243 236 / 96%);
+    backdrop-filter: blur(10px);
+  }
+
+  .download-link {
+    min-height: 2.9rem;
+    padding-inline: 1.25rem;
+    box-shadow: 0 6px 18px rgb(15 42 68 / 20%);
+  }
+
+  .store-badge { width: min(12rem, 100%); }
+  .store-badge img { width: 100%; height: auto; }
+}
