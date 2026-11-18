@@ -222,14 +222,12 @@ a:focus-visible {
 
 .offer-title { font-size: clamp(2rem, 3.2vw, 2.8rem); }
 
-.price {
-  font: 600 clamp(2.8rem, 6vw, 4rem)/1 var(--sans);
-  letter-spacing: -.045em;
+.offer-price {
+  margin-top: .6rem;
+  color: var(--navy);
+  font-weight: 700;
+  font-variant-numeric: lining-nums;
 }
-
-.price { font-variant-numeric: lining-nums; }
-
-.price span { font: 500 .85rem var(--sans); letter-spacing: 0; }
 
 .offer-subtitle { margin-top: .6rem; }
 .offer-subtitle em { color: var(--muted); }
